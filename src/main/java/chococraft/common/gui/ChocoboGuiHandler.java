@@ -14,6 +14,8 @@
 
 package chococraft.common.gui;
 
+import chococraft.common.bags.ChocoPackBagInventory;
+import chococraft.common.bags.ChocoSaddleBagInventory;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
@@ -40,6 +42,13 @@ public class ChocoboGuiHandler implements IGuiHandler
 		EntityChocobo chocobo = this.getChocoboById(world, chocoboId, world.provider.dimensionId);
 		if(null != chocobo)
 		{
+			if(chocobo.getChocoBagInventory() == null) {
+				if (saddleOrPack == 0)
+					chocobo.injectInventory(new ChocoSaddleBagInventory(chocobo));
+				else
+					chocobo.injectInventory(new ChocoPackBagInventory(chocobo));
+			}
+
 			return new GuiChocoboBag(player.inventory, chocobo.getChocoBagInventory());
 		}
 		return null;
