@@ -12,7 +12,7 @@
 // <date>2012-10-25</date>
 // <summary>Block class for Gysahl Greens</summary>
 
-package chococraft.common.items;
+package chococraft.common.blocks;
 
 import chococraft.common.config.ChocoCraftCreativeTabs;
 import chococraft.common.config.Constants;

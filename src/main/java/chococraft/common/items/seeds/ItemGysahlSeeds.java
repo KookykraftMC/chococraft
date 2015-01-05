@@ -1,4 +1,4 @@
-package chococraft.common.items;
+package chococraft.common.items.seeds;
 
 import chococraft.common.config.ChocoCraftCreativeTabs;
 import chococraft.common.config.Constants;

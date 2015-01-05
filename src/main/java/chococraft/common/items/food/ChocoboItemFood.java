@@ -1,4 +1,4 @@
-package chococraft.common.items;
+package chococraft.common.items.food;
 
 import chococraft.common.config.ChocoCraftCreativeTabs;
 import net.minecraft.client.renderer.texture.IIconRegister;

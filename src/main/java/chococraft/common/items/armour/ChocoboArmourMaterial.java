@@ -1,4 +1,4 @@
-package chococraft.common.items;
+package chococraft.common.items.armour;
 
 public enum ChocoboArmourMaterial
 {

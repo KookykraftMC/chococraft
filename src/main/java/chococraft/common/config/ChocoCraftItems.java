@@ -1,7 +1,13 @@
 package chococraft.common.config;
 
 import chococraft.common.ModChocoCraft;
+import chococraft.common.gui.ChocoboCreativeTab;
 import chococraft.common.items.*;
+import chococraft.common.items.armour.ChocoboArmourMaterial;
+import chococraft.common.items.armour.ChocoboItemDisguise;
+import chococraft.common.items.eggs.ItemPurpleChocoboEgg;
+import chococraft.common.items.food.ChocoboItemFood;
+import chococraft.common.items.seeds.ItemGysahlSeeds;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
@@ -39,64 +45,52 @@ public class ChocoCraftItems {
 
 		// Chocopedia
 		chocopediaItem = new ChocoboItem().setUnlocalizedName(Constants.KEY_CHOCOPEDIA).setMaxStackSize(1);
-		chocopediaItem.setCreativeTab(CreativeTabs.tabTools);
 		GameRegistry.registerItem(chocopediaItem, "Chocopedia");
 
 		// Chocobo Feather
 		chocoboFeatherItem = new ChocoboItem().setUnlocalizedName(Constants.KEY_FEATHER).setMaxStackSize(64);
-		chocoboFeatherItem.setCreativeTab(CreativeTabs.tabMaterials);
 		GameRegistry.registerItem(chocoboFeatherItem, "Chocobo_Feather");
 
 		// riding gear
 		// Chocobo Saddle
 		chocoboSaddleItem = new ChocoboItem().setUnlocalizedName(Constants.KEY_SADDLE).setMaxStackSize(5);
-		chocoboSaddleItem.setCreativeTab(CreativeTabs.tabTransport);
 		GameRegistry.registerItem(chocoboSaddleItem, "Chocobo_Saddle");
 
 		// Chocobo Saddle Bags
 		chocoboSaddleBagsItem = new ChocoboItem().setUnlocalizedName(Constants.KEY_SADDLEBAG).setMaxStackSize(8);
-		chocoboSaddleBagsItem.setCreativeTab(CreativeTabs.tabTransport);
 		GameRegistry.registerItem(chocoboSaddleBagsItem, "Chocobo_Saddle_Bags");
 
 		// Chocobo Pack Bags
 		chocoboPackBagsItem = new ChocoboItem().setUnlocalizedName(Constants.KEY_PACKBAG).setMaxStackSize(8);
-		chocoboPackBagsItem.setCreativeTab(CreativeTabs.tabTransport);
 		GameRegistry.registerItem(chocoboPackBagsItem, "Chocobo_Pack_Bags");
 
 		// Gysahls
 		// Gysahl seeds
 		gysahlSeedsItem = (new ItemGysahlSeeds(ChocoCraftBlocks.gysahlStemBlock, Blocks.farmland));
-		//gysahlSeedsItem.setCreativeTab(chocoboCreativeItems);
 		GameRegistry.registerItem(gysahlSeedsItem, "Gysahl_Seeds");
 
 		// Loverly Gysahl
 		gysahlLoverlyItem = new ChocoboItem().setUnlocalizedName(Constants.KEY_GY_LOVERLY).setMaxStackSize(64);
-		gysahlLoverlyItem.setCreativeTab(CreativeTabs.tabMisc);
 		GameRegistry.registerItem(gysahlLoverlyItem, "Loverly_Gysahl");
 
 		// Golden Gysahl
 		gysahlGoldenItem = new ChocoboItem().setUnlocalizedName(Constants.KEY_GY_GOLDEN).setMaxStackSize(64);
-		gysahlGoldenItem.setCreativeTab(CreativeTabs.tabMisc);
 		GameRegistry.registerItem(gysahlGoldenItem, "Golden_Gysahl");
 
 		// Pink Gysahl
 		gysahlPinkItem = new ChocoboItem().setUnlocalizedName(Constants.KEY_GY_PINK).setMaxStackSize(64);
-		gysahlPinkItem.setCreativeTab(CreativeTabs.tabMisc);
 		GameRegistry.registerItem(gysahlPinkItem, "Pink_Gysahl");
 
 		// Red Gysahl
 		gysahlRedItem = new ChocoboItem().setUnlocalizedName(Constants.KEY_GY_RED).setMaxStackSize(64);
-		gysahlRedItem.setCreativeTab(CreativeTabs.tabMisc);
 		GameRegistry.registerItem(gysahlRedItem, "Red_Gysahl");
 
 		// Gysahl Cake
 		gysahlCakeItem = new ChocoboItem().setUnlocalizedName(Constants.KEY_GY_CAKE).setMaxStackSize(8);
-		gysahlCakeItem.setCreativeTab(CreativeTabs.tabMisc);
 		GameRegistry.registerItem(gysahlCakeItem, "Gysahl Cake");
 
 		// Chocob Whistle
 		chocoboWhistleItem = new ChocoboItem().setUnlocalizedName(Constants.KEY_WHISTLE).setMaxStackSize(64);
-		chocoboWhistleItem.setCreativeTab(CreativeTabs.tabTools);
 		GameRegistry.registerItem(chocoboWhistleItem, "Chocobo_Whistle");
 
 		// Nether Chocobo Egg
@@ -138,12 +132,10 @@ public class ChocoCraftItems {
 		// Gysahl Pickles
 		gysahlPicklesRawItem = new ChocoboItem();
 		gysahlPicklesRawItem.setUnlocalizedName(Constants.KEY_GY_PICKLES_RAW).setMaxStackSize(64);
-		gysahlPicklesRawItem.setCreativeTab(CreativeTabs.tabMisc);
 		GameRegistry.registerItem(gysahlPicklesRawItem, "Gysahl_Raw_Pickles");
 
 		gysahlPicklesItem = new ChocoboItemFood(2, false);
 		gysahlPicklesItem.setUnlocalizedName(Constants.KEY_GY_PICKLES);
-		gysahlPicklesItem.setCreativeTab(CreativeTabs.tabMisc);
 		GameRegistry.registerItem(gysahlPicklesItem, "Gysahl_Pickles");
 	}
 }

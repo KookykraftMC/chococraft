@@ -1,9 +1,8 @@
-package chococraft.common.items;
+package chococraft.common.items.armour;
 
 import chococraft.common.config.ChocoCraftCreativeTabs;
 import chococraft.common.config.ChocoCraftItems;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;

@@ -1,8 +1,8 @@
 package chococraft.common.config;
 
-import chococraft.common.items.BlockGysahlGreen;
-import chococraft.common.items.BlockGysahlStem;
-import chococraft.common.items.BlockStraw;
+import chococraft.common.blocks.BlockGysahlGreen;
+import chococraft.common.blocks.BlockGysahlStem;
+import chococraft.common.blocks.BlockStraw;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 

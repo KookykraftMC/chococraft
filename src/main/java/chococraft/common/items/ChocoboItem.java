@@ -14,6 +14,7 @@
 
 package chococraft.common.items;
 
+import chococraft.common.config.ChocoCraftCreativeTabs;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -28,7 +29,7 @@ public class ChocoboItem extends Item
 {
 	public ChocoboItem()
 	{
-		//this.setCreativeTab(ModChocoCraft.chocoboCreativeItems);
+		this.setCreativeTab(ChocoCraftCreativeTabs.tabChococraft);
 	}
 
 	@Override

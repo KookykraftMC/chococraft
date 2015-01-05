@@ -12,7 +12,7 @@
 // <date>2012-10-25</date>
 // <summary>Block class for Gysahl Stems</summary>
 
-package chococraft.common.items;
+package chococraft.common.blocks;
 
 import chococraft.common.ModChocoCraft;
 import chococraft.common.config.ChocoCraftBlocks;
@@ -45,7 +45,6 @@ public class BlockGysahlStem extends BlockBush
         this.setTickRandomly(true);
         float f = 0.5F;
         this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, 0.25F, 0.5F + f);
-		this.setCreativeTab(ChocoCraftCreativeTabs.tabChococraft);
         this.disableStats();
         this.setStepSound(soundTypeGrass);
 		setHardness(0f);
