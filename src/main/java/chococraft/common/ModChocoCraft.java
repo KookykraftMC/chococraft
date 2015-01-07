@@ -40,7 +40,11 @@ import java.io.File;
 
 @Mod(modid= Constants.TCC_MODID, name=Constants.TCC_NAME, version=Constants.TCC_VERSION)
 public class ModChocoCraft
-{	
+{
+	//TODO
+	//config drop rate for pedia
+	//update version message
+	//thaumcraft intregration for crops
 	public static Configuration mainConfiguration;
 
 	public static boolean debugMode = false;
@@ -198,6 +202,8 @@ public class ModChocoCraft
 
 		ChocoCraftBlocks.registerBlocks();
 		ChocoCraftItems.registerItems();
+
+		ChocoCraftModIntegration.integrateMods();
 	}
 	
 	@EventHandler
