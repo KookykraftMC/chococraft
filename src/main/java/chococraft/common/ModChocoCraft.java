@@ -21,6 +21,7 @@ import chococraft.common.gui.ChocoboGuiHandler;
 import chococraft.common.network.PacketRegistry;
 import chococraft.common.proxy.CommonProxyChocoCraft;
 import chococraft.common.tick.ServerSpawnTickHandler;
+import chococraft.common.utils.UpdateChecker;
 import chococraft.common.worldgen.WorldGenGysahls;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -42,9 +43,9 @@ import java.io.File;
 public class ModChocoCraft
 {
 	//TODO
-	//config drop rate for pedia
-	//update version message
-	//thaumcraft intregration for crops
+	//Redo config file to use gson
+	//config drop rate for pedia - see above..
+	//cleanup stupid main mod class bloated with crap
 	public static Configuration mainConfiguration;
 
 	public static boolean debugMode = false;
@@ -228,6 +229,8 @@ public class ModChocoCraft
 		NetworkRegistry.INSTANCE.registerGuiHandler(this, new ChocoboGuiHandler());
 
 		FMLCommonHandler.instance().bus().register(new ServerSpawnTickHandler());
+
+		new Thread(new UpdateChecker()).start();
 	}
 	
 

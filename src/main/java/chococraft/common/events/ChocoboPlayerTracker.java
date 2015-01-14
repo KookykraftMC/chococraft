@@ -14,12 +14,21 @@
 
 package chococraft.common.events;
 
+import chococraft.common.ModChocoCraft;
+import chococraft.common.config.Constants;
 import chococraft.common.network.PacketRegistry;
 import chococraft.common.network.clientSide.ChocoboLocalSetupUpdate;
 import chococraft.common.network.clientSide.ChocoboSetupUpdate;
+import chococraft.common.utils.UpdateChecker;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.ChatStyle;
+import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.IChatComponent;
+
+import java.util.List;
 
 
 public class ChocoboPlayerTracker
@@ -29,6 +38,36 @@ public class ChocoboPlayerTracker
 	public void onPlayerLogin(PlayerEvent.PlayerLoggedInEvent event)
 	{
 		this.sendSetupUpdate((EntityPlayerMP)event.player);
+
+		try {
+			UpdateChecker.VersionInfo latestVersionInfo = UpdateChecker.getResponse().versions.get(0);
+			if(latestVersionInfo.modversion.equals(Constants.TCC_VERSION))
+				return;
+
+			ChatStyle styleUnderlined = new ChatStyle().setUnderlined(true).setColor(EnumChatFormatting.GOLD);
+			ChatStyle style = new ChatStyle().setColor(EnumChatFormatting.GOLD);
+
+			IChatComponent text = new ChatComponentText("An update is avilable for Chococraft!, Latest version: "+latestVersionInfo.modversion).setChatStyle(styleUnderlined);
+			event.player.addChatComponentMessage(text);
+			text = new ChatComponentText("Changes:").setChatStyle(style);
+			event.player.addChatComponentMessage(text);
+
+			for(String line : latestVersionInfo.changes) {
+				text = new ChatComponentText(line).setChatStyle(style);
+				event.player.addChatComponentMessage(text);
+			}
+			text = new ChatComponentText("Get the latest version at http://minecraft.curseforge.com/mc-mods/225280-chococraft").setChatStyle(style);
+			event.player.addChatComponentMessage(text);
+
+		}catch (NullPointerException npe) {
+			System.out.println("npe choco");
+			//prob failed to connect
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+
+
 	}
 
 	@SubscribeEvent
