@@ -1,4 +1,4 @@
-This is the official version of Torojimas Chococraft v3.0.3 for usage with minecraft 1.6.4. Chococraft has been originally created by EddieV and is now refactored and officially maintained by Torojima.
+﻿This is the official version of Torojimas Chococraft for usage with minecraft 1.7.10. Chococraft has been originally created by EddieV and is now refactored and officially maintained by Clienthax.
 
 This mod adds a mob called Chocobo to the game. This includes different coloured mob types with different attributes in their grown-up and juvenile form.
 
