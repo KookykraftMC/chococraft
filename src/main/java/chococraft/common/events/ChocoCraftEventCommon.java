@@ -22,6 +22,7 @@ import chococraft.common.entities.colours.EntityChocoboPurple;
 import chococraft.common.gui.GuiStarter;
 import chococraft.common.helper.ChocoboPlayerHelper;
 import chococraft.common.blocks.BlockGysahlStem;
+import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.eventhandler.Event;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.entity.EntityLivingBase;
@@ -40,9 +41,16 @@ import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.player.BonemealEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.Action;
+import net.minecraftforge.event.world.BlockEvent;
 
 public class ChocoCraftEventCommon
 {
+
+	@SubscribeEvent
+	public void onSmackBlock(BlockEvent event) {
+		//FMLLog.bigWarning(event.block.getUnlocalizedName()+" "+event.blockMetadata);
+	}
+
 	@SubscribeEvent
 	public void onUseBonemeal(BonemealEvent event)
 	{
@@ -195,7 +203,8 @@ public class ChocoCraftEventCommon
 			double d100 = Math.random() * 100;
 			if (d100 < Constants.CHOCOPEDIA_MOB_DROP_RATE)
 			{
-				event.entityLiving.dropItem(ChocoCraftItems.chocopediaItem, 1);
+				//TODO reenable after sorting the config file out..
+//				event.entityLiving.dropItem(ChocoCraftItems.chocopediaItem, 1);
 			}
 		}
 	}
