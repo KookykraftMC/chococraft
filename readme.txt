@@ -1,4 +1,4 @@
-﻿This is the official version of Torojimas Chococraft for usage with minecraft 1.7.10. Chococraft has been originally created by EddieV and is now refactored and officially maintained by Clienthax.
+This is the official version of Torojimas Chococraft for usage with Minecraft 1.7.10. Chococraft has been originally created by EddieV and is now refactored and officially maintained by Clienthax.
 
 This mod adds a mob called Chocobo to the game. This includes different coloured mob types with different attributes in their grown-up and juvenile form.
 
@@ -6,22 +6,9 @@ The most basic type can be found in the wild and can be tamed by using "Gysahl G
 
 Chocobos can be breed and procreate. The offspring will be a Chicobo, the juvenile form of a Chocobo. After a while a Chicobo will grow into a Chocobo. Chicobos will be born wild and have to be tamed. Chicobos will inherit the type from one of their parents or mutate into new types. Thus by repeatedly breeding Chocobos all normal types of Chocobos can be acquired from tamed wild Chocobos. There are a few special Chocobo types though, which can only be acquired by special means.
 
-ACHTUNG! CAUTION! ¡CUIDADO! चेतावनी! ATTENZIONE! береги́сь!
-This version of Chococraft is not compatible to versions pre 1.3.2. It will destroy your saved world if old Chocobos are included. Thus, if you want to use an old world with the new version of this mod, you should first start minecraft without the Chococraft mod, enter and save your world, thus removing all traces of older versions of Chococraft and only then start minecraft with the new version of Chococraft and tame new Chocobos.
-
-This version of Chococraft will remove all Chocobos from worlds pre 2.8.5.  Items in the Chocobo saddlebag and packbag inventories will be lost. ChocoCraft items stored in normal chests or player inventories are not affected.
-
-Changelog:
-1. hight issue solved
-2. chicobo mutation colour bug fixed
-3. same gender procreation bug fixed
-4. moved disguise skin to assets folder
-5. x,x position Chunk generated bug fixed
-
-
 see the minecraft forums for further informations
-http://www.minecraftforum.net/topic/1119809-
+http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2269183-clienthaxs-chococraft-happiness-distilled-into
 
-or follow us on twitter  https://twitter.com/Torojima
+or follow us on twitter  https://twitter.com/clienthax
 
-Torojima
+Clienthax
