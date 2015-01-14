@@ -14,7 +14,6 @@
 
 package chococraft.common.events;
 
-import chococraft.common.ModChocoCraft;
 import chococraft.common.config.Constants;
 import chococraft.common.network.PacketRegistry;
 import chococraft.common.network.clientSide.ChocoboLocalSetupUpdate;
@@ -27,8 +26,6 @@ import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ChatStyle;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IChatComponent;
-
-import java.util.List;
 
 
 public class ChocoboPlayerTracker

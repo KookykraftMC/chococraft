@@ -4,7 +4,6 @@ import com.google.gson.Gson;
 import cpw.mods.fml.common.FMLLog;
 import org.apache.commons.io.IOUtils;
 
-import java.io.FileReader;
 import java.net.URL;
 import java.util.List;
 
@@ -24,9 +23,6 @@ public class UpdateChecker implements Runnable {
 		try {
 			String jsonString = IOUtils.toString(new URL(updateURL));
 			response = gson.fromJson(jsonString, UpdateResponse.class);
-			if (response.versions.size() == 0)
-				return;
-
 		} catch (Exception e) {
 			FMLLog.warning("If you see a error just below this line, its prob fine to ignore <3 chococraft");
 			e.printStackTrace();

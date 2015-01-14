@@ -16,7 +16,6 @@ package chococraft.common.blocks;
 
 import chococraft.common.ModChocoCraft;
 import chococraft.common.config.ChocoCraftBlocks;
-import chococraft.common.config.ChocoCraftCreativeTabs;
 import chococraft.common.config.ChocoCraftItems;
 import chococraft.common.config.Constants;
 import cpw.mods.fml.relauncher.Side;

@@ -1,7 +1,6 @@
 package chococraft.common.config;
 
 import chococraft.common.ModChocoCraft;
-import chococraft.common.gui.ChocoboCreativeTab;
 import chococraft.common.items.*;
 import chococraft.common.items.armour.ChocoboArmourMaterial;
 import chococraft.common.items.armour.ChocoboItemDisguise;
@@ -9,7 +8,6 @@ import chococraft.common.items.eggs.ItemPurpleChocoboEgg;
 import chococraft.common.items.food.ChocoboItemFood;
 import chococraft.common.items.seeds.ItemGysahlSeeds;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 

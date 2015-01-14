@@ -1,6 +1,5 @@
 package chococraft.common.entities.ai;
 
-import chococraft.common.entities.colours.EntityChocoboYellow;
 import net.minecraft.entity.ai.EntityAIBase;
 import chococraft.common.entities.EntityAnimalChocobo;
 

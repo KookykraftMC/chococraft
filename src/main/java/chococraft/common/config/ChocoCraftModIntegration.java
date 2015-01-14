@@ -2,7 +2,6 @@ package chococraft.common.config;
 
 import cpw.mods.fml.common.event.FMLInterModComms;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.oredict.OreDictionary;
 
 public class ChocoCraftModIntegration {
 

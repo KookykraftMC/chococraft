@@ -29,7 +29,6 @@ import chococraft.common.network.clientSide.*;
 import chococraft.common.network.serverSide.ChocoboAttribute;
 import chococraft.common.network.serverSide.ChocoboChangeOwner;
 import chococraft.common.network.serverSide.ChocoboSetInLove;
-import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.network.ByteBufUtils;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.IEntityAdditionalSpawnData;

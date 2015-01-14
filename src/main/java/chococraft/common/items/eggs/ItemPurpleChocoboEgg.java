@@ -16,7 +16,6 @@ package chococraft.common.items.eggs;
 
 import chococraft.common.config.ChocoCraftCreativeTabs;
 import chococraft.common.items.ChocoboItem;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;

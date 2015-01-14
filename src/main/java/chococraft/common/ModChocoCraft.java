@@ -14,7 +14,6 @@
 
 package chococraft.common;
 
-import chococraft.client.ClientProxyChocoCraft;
 import chococraft.common.config.*;
 import chococraft.common.events.ChocoboPlayerTracker;
 import chococraft.common.gui.ChocoboGuiHandler;
@@ -32,9 +31,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.item.ItemStack;
 import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 
 import java.io.File;

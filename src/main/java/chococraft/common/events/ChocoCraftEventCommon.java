@@ -22,7 +22,6 @@ import chococraft.common.entities.colours.EntityChocoboPurple;
 import chococraft.common.gui.GuiStarter;
 import chococraft.common.helper.ChocoboPlayerHelper;
 import chococraft.common.blocks.BlockGysahlStem;
-import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.eventhandler.Event;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.entity.EntityLivingBase;
