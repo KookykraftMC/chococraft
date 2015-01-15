@@ -13,7 +13,7 @@ public class ChocoCraftWorld {
 
 	public static void registerDungeonLoot()
 	{
-		if(ModChocoCraft.chocopediaInDungeons)
+		if(ModChocoCraft.chococraftConfig.config.chocopediaInDungeons)
 		{
 			ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST).addItem(new WeightedRandomChestContent(new ItemStack(ChocoCraftItems.chocopediaItem),Constants.CHOCOPEDIA_DUNGEON_MIN,Constants.CHOCOPEDIA_DUNGEON_MAX,Constants.CHOCOPEDIA_DUNGEON_WEIGHT));
 			ChestGenHooks.getInfo(ChestGenHooks.MINESHAFT_CORRIDOR).addItem(new WeightedRandomChestContent(new ItemStack(ChocoCraftItems.chocopediaItem),Constants.CHOCOPEDIA_DUNGEON_MIN,Constants.CHOCOPEDIA_DUNGEON_MAX,Constants.CHOCOPEDIA_DUNGEON_WEIGHT));

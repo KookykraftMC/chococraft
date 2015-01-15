@@ -316,7 +316,7 @@ public class ModelChocobo extends ModelBase
 		// flying animation
 		if (Math.abs(entity.motionY) > 0.1F)
 		{
-			if(ModChocoCraft.chocoboWingFlutter)
+			if(ModChocoCraft.chococraftConfig.config.chocoboWingFlutter)
 			{
 				setRotation(rightWing, (pi/2F) - (pi/12), -0.0174533F, -f2);
 				setRotation(leftWing, (pi/2F) - (pi/12), 0.0174533F, f2);

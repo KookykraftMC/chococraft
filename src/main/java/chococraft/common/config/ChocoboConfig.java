@@ -31,6 +31,7 @@ import chococraft.common.helper.ChocoboBiomeHelper;
 import chococraft.common.helper.ChocoboMathHelper;
 import net.minecraft.world.biome.BiomeGenBase;
 
+@Deprecated
 public class ChocoboConfig
 {	
 	static String CONFIG_FILE_NAME = "chocobo_config.txt";

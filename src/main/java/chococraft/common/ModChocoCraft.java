@@ -15,6 +15,7 @@
 package chococraft.common;
 
 import chococraft.common.config.*;
+import chococraft.common.config.gson.ConfigGson;
 import chococraft.common.events.ChocoboPlayerTracker;
 import chococraft.common.gui.ChocoboGuiHandler;
 import chococraft.common.network.PacketRegistry;
@@ -49,11 +50,17 @@ public class ModChocoCraft
 
 	// setup
 	public static File configFolder;
+	@Deprecated
 	public static boolean chocoboWingFlutter;
-	public static int genderMaleChance;
+	@Deprecated
+	public static int genderMaleChance;//TODO add to config
+	@Deprecated
 	public static boolean showChocoboNames;
+	@Deprecated
 	public static boolean hungerEnabled;
+	@Deprecated
 	public static boolean riderBuffsEnabled;
+	@Deprecated
 	public static boolean wildCanDespawn;
 	
 	// chocobo size setup
@@ -61,56 +68,83 @@ public class ModChocoCraft
 	public static float chocoboWidth;
 	
 	// gysahl mutation setup
+	@Deprecated
 	public static int gysahlGreenMutationRate;
+	@Deprecated
 	public static int gysahlLoveMutationRate;
 	
 	// gysahl world generation setup
-	public static int gysahlWorldGenRate;
-	public static int gysahlSeedGrassDropWeight;
+	@Deprecated
+	public static int gysahlWorldGenRate;//TODO add to config
+	@Deprecated
+	public static int gysahlSeedGrassDropWeight;//TODO add to config
 	
 	// feather drop setup
+	@Deprecated
 	public static int featherDropChance;
+	@Deprecated
 	public static int featherDelayRandom;
+	@Deprecated
 	public static int featherDelayStatic;
 	
 	// pen heal setup
+	@Deprecated
 	public static int penHealProbability;
+	@Deprecated
 	public static int penHealCauldronRange;
 	
 	// spawn setup
+	@Deprecated
 	public static int spawnTimeDelay;
+	@Deprecated
 	public static int spawnGroupMin;
+	@Deprecated
 	public static int spawnGroupMax;
+	@Deprecated
 	public static int spawnTotalMax;
+	@Deprecated
 	public static int spawnProbability;
+	@Deprecated
 	public static int spawnLimitChunkRadius;
+	@Deprecated
 	public static int spawnDistanceNextWild;
 	
 	// procreate setup
+	@Deprecated
 	public static int breedingDelayMale;
+	@Deprecated
 	public static int breedingDelayFemale;
+	@Deprecated
 	public static int growupDelayStatic;
+	@Deprecated
 	public static int growupDelayRandom;
 	
 	// hunger setup
+	@Deprecated
 	public static int hungerDelayChocobo;
+	@Deprecated
 	public static int hungerDelayChicobo;
 	
 	// movement setup
+	@Deprecated
 	public static boolean saddledCanWander;
 	
 	// chocopedia setup
+	@Deprecated
 	public static boolean chocopediaInDungeons;
 	
 	// debug
 	public static long spawnDbTimeDelay;
 	public static String spawnDbStatus;
-	
+
+	@Deprecated
 	public static double renderNameHeight;
+	@Deprecated
 	public static int livingSoundProb;
 	
 	public static boolean isRemoteClient = false;
 
+	@Deprecated
 	public static BiomeGenBase[] spawnBiomes =
 	{
 		BiomeGenBase.extremeHills,
@@ -133,6 +167,9 @@ public class ModChocoCraft
 
 	@SidedProxy(clientSide = "chococraft.client.ClientProxyChocoCraft", serverSide = "chococraft.common.proxy.CommonProxyChocoCraft")
 	public static CommonProxyChocoCraft proxy;
+
+
+	public static ConfigGson chococraftConfig = null;
 
 	@EventHandler
 	public void preLoadChocoCraft(FMLPreInitializationEvent preInitEvent)
@@ -202,6 +239,8 @@ public class ModChocoCraft
 		ChocoCraftItems.registerItems();
 
 		ChocoCraftModIntegration.integrateMods();
+
+		chococraftConfig = new ConfigGson();
 	}
 	
 	@EventHandler

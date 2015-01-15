@@ -431,7 +431,7 @@ public abstract class EntityChocoboRideable extends EntityAnimalChocobo
 	@Override
 	public void toggleFollowWanderStay()
 	{
-		if(!ModChocoCraft.saddledCanWander && (this.isSaddled() || this.isPackBagged()))
+		if(!ModChocoCraft.chococraftConfig.config.saddledCanWander && (this.isSaddled() || this.isPackBagged()))
 		{
 			this.toggleFollowStay();
 		}

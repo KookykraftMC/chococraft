@@ -15,7 +15,7 @@ public class ServerSpawnTickHandler
 	@SubscribeEvent
 	public void worldTick(TickEvent.WorldTickEvent event)
 	{
-		if(spawnTimer++ < ModChocoCraft.spawnTimeDelay)
+		if(spawnTimer++ < ModChocoCraft.chococraftConfig.config.spawnTimeDelay)
 			return;
 		spawnTimer = 0;
 

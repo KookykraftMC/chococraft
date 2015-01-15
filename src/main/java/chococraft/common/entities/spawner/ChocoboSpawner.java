@@ -38,7 +38,7 @@ public final class ChocoboSpawner
 
 			// only spawn if random check is positive
 			int d100 = world.rand.nextInt(100);
-			if(d100 > ModChocoCraft.spawnProbability)
+			if(d100 > ModChocoCraft.chococraftConfig.config.spawnProbability)
 			{
 				ModChocoCraft.spawnDbStatus = "< prob";
 				return;
@@ -105,16 +105,16 @@ public final class ChocoboSpawner
 			int chunkPosX_0 = MathHelper.floor_double(posX + randDeltaX);
 			int chunkPosZ_0 = MathHelper.floor_double(posZ + randDeltaZ);
 			
-			int wildInChunks = countWildInChunkRadius(world, chunkPosX_0, chunkPosZ_0, ModChocoCraft.spawnLimitChunkRadius);
+			int wildInChunks = countWildInChunkRadius(world, chunkPosX_0, chunkPosZ_0, ModChocoCraft.chococraftConfig.config.spawnLimitChunkRadius);
 			
-			if (wildInChunks > ModChocoCraft.spawnTotalMax)
+			if (wildInChunks > ModChocoCraft.chococraftConfig.config.spawnTotalMax)
 			{
 				ModChocoCraft.spawnDbStatus = "to many (" + wildInChunks + ")";
 				return;
 			}
 			
 			int distanceNextWild = distanceToNextWild(world, chunkPosX_0, chunkPosZ_0);
-			if (distanceNextWild < ModChocoCraft.spawnDistanceNextWild)
+			if (distanceNextWild < ModChocoCraft.chococraftConfig.config.distanceNextWild)
 			{
 				ModChocoCraft.spawnDbStatus = "to close (" + distanceNextWild + ")";
 				return;
@@ -122,8 +122,8 @@ public final class ChocoboSpawner
 
 			int spawnedChocobos = 0;
 
-			int randomGroupSize = ModChocoCraft.spawnGroupMin;
-			int groupSizeDelta = ModChocoCraft.spawnGroupMax - ModChocoCraft.spawnGroupMin;
+			int randomGroupSize = ModChocoCraft.chococraftConfig.config.spawnGroupMin;
+			int groupSizeDelta = ModChocoCraft.chococraftConfig.config.spawnGroupMax - ModChocoCraft.chococraftConfig.config.spawnGroupMin;
 			
 			if(groupSizeDelta > 0)
 			{

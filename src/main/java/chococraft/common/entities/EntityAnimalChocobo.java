@@ -234,12 +234,12 @@ public abstract class EntityAnimalChocobo extends EntityTameable implements IEnt
     public boolean isHungry()
     {
     	boolean hungry = this.getTimeUntilHunger() <= 0;    	
-    	return hungry && ModChocoCraft.hungerEnabled;
+    	return hungry && ModChocoCraft.chococraftConfig.config.hungerEnabled;
     }
     
     public void feeding()
     {
-    	int timeUntilHunger = this.isChild() ? ModChocoCraft.hungerDelayChicobo : ModChocoCraft.hungerDelayChocobo;
+    	int timeUntilHunger = this.isChild() ? ModChocoCraft.chococraftConfig.config.hungerDelayChicobo : ModChocoCraft.chococraftConfig.config.hungerDelayChocobo;
     	this.setTimeUntilHunger(timeUntilHunger);
     	this.sendParticleUpdate("mobSpell", this, 7);
     }
@@ -473,12 +473,12 @@ public abstract class EntityAnimalChocobo extends EntityTameable implements IEnt
 				if(this.worldObj.getWorldTime() % 40 == 0)
 				{
 					int d100 = this.rand.nextInt(100);
-					if(d100 < ModChocoCraft.penHealProbability)
+					if(d100 < ModChocoCraft.chococraftConfig.config.penHealProbability)
 					{
 						Block blockBelow = this.worldObj.getBlock(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.boundingBox.minY), MathHelper.floor_double(this.posZ));
 						if(blockBelow.equals(ChocoCraftBlocks.strawBlock))
 						{
-							int range = ModChocoCraft.penHealCauldronRange;
+							int range = ModChocoCraft.chococraftConfig.config.penHealCauldronRange;
 							if(this.isFilledCauldronNear(this.posX, this.posY, this.posZ, range, 2, range))
 							{
 								this.heal(this.rand.nextInt(3) + 1);
@@ -709,8 +709,8 @@ public abstract class EntityAnimalChocobo extends EntityTameable implements IEnt
     			babyChicobo.setLocationAndAngles(posX, posY, posZ, rotationYaw, rotationPitch);
     			this.worldObj.spawnEntityInWorld(babyChicobo);
 
-    			this.setGrowingAge(this.isMale() ? ModChocoCraft.breedingDelayMale : ModChocoCraft.breedingDelayFemale);
-    			otherParent.setGrowingAge(otherParent.isMale() ? ModChocoCraft.breedingDelayMale : ModChocoCraft.breedingDelayFemale);
+    			this.setGrowingAge(this.isMale() ? ModChocoCraft.chococraftConfig.config.breedingDelayMale : ModChocoCraft.chococraftConfig.config.breedingDelayFemale);
+    			otherParent.setGrowingAge(otherParent.isMale() ? ModChocoCraft.chococraftConfig.config.breedingDelayMale : ModChocoCraft.chococraftConfig.config.breedingDelayFemale);
     			this.entityToAttack = null;
     			otherParent.entityToAttack = null;
     			this.breeding = 0;
@@ -763,7 +763,7 @@ public abstract class EntityAnimalChocobo extends EntityTameable implements IEnt
     @Override
     public int getMaxSpawnedInChunk()
     {
-        return ModChocoCraft.spawnTotalMax;
+        return ModChocoCraft.chococraftConfig.config.spawnTotalMax;
     }
     
     @Override
@@ -831,7 +831,7 @@ public abstract class EntityAnimalChocobo extends EntityTameable implements IEnt
     @Override
 	protected boolean canDespawn()
 	{
-		return ModChocoCraft.wildCanDespawn && !this.isTamed();
+		return ModChocoCraft.chococraftConfig.config.wildCanDespawn && !this.isTamed();
 	}
     
     @Override
@@ -1135,7 +1135,7 @@ public abstract class EntityAnimalChocobo extends EntityTameable implements IEnt
 	public boolean canRenderName()
 	{
 		return this.isClient()
-				&& ModChocoCraft.showChocoboNames && this.isTamed()
+				&& ModChocoCraft.chococraftConfig.config.showChocoboNames && this.isTamed()
 				&& this.riddenByEntity == null
 				&& !this.isHidename() && !this.getName().isEmpty();
 	}

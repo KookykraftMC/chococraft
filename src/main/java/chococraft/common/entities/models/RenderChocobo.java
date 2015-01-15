@@ -43,7 +43,7 @@ public class RenderChocobo extends RenderLiving
 		super.doRender(entitychocobo, d, d1, d2, f, f1);
 		if (entitychocobo.canRenderName())
 		{
-			super.func_147906_a(entitychocobo, entitychocobo.getName(), d, (d1 + ModChocoCraft.renderNameHeight), d2, maxNameDistance);//renderLivingLabel
+			super.func_147906_a(entitychocobo, entitychocobo.getName(), d, (d1 + ModChocoCraft.chococraftConfig.config.renderNameHeight), d2, maxNameDistance);//renderLivingLabel
 		}
 	}
 

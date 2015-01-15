@@ -106,7 +106,7 @@ public class EntityChocoboBlue extends EntityChocobo
 	@Override
 	public void setRiderAbilities(boolean mounted)
 	{
-		if(this.riddenByEntity instanceof EntityPlayer && ModChocoCraft.riderBuffsEnabled)
+		if(this.riddenByEntity instanceof EntityPlayer && ModChocoCraft.chococraftConfig.config.riderBuffsEnabled)
 		{
 			EntityPlayer rider = (EntityPlayer)this.riddenByEntity;			
 			rider.addPotionEffect(new PotionEffect(13, 100, -1, true));

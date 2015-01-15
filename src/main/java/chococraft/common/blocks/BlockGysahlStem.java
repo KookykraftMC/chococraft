@@ -180,13 +180,13 @@ public class BlockGysahlStem extends BlockBush
     {
     	if (i == 4)
     	{
-    		if(random.nextInt(1000) > ModChocoCraft.gysahlGreenMutationRate)
+    		if(random.nextInt(1000) > ModChocoCraft.chococraftConfig.config.gysahlGreenMutationRate)
     		{
     			return Item.getItemFromBlock(ChocoCraftBlocks.gysahlGreenBlock);
     		}
     		else 
     		{
-    			if(random.nextInt(1000) > ModChocoCraft.gysahlLoveMutationRate)
+    			if(random.nextInt(1000) > ModChocoCraft.chococraftConfig.config.gysahlLoverlyMutationRate)
     			{
     				return ChocoCraftItems.gysahlLoverlyItem;
     			}

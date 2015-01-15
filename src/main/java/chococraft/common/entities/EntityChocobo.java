@@ -56,7 +56,7 @@ public abstract class EntityChocobo extends EntityChocoboRideable
 		this.destPos = 0.0F;
 		this.wingRotDelta = 1.0F;
 		this.setSize(ModChocoCraft.chocoboWidth, ModChocoCraft.chocoboHeight);
-		this.timeUntilNextFeather = this.rand.nextInt(ModChocoCraft.featherDelayRandom) + ModChocoCraft.featherDelayStatic;
+		this.timeUntilNextFeather = this.rand.nextInt(ModChocoCraft.chococraftConfig.config.featherDelayRandom) + ModChocoCraft.chococraftConfig.config.featherDelayStatic;
         
 		this.tasks.addTask(this.taskNumber++, new ChocoboAIMate(this, 1.0D));
 	}
@@ -289,11 +289,11 @@ public abstract class EntityChocobo extends EntityChocoboRideable
 			if(--this.timeUntilNextFeather <= 0)
 			{
 				int d100 = this.rand.nextInt(100);
-				if (d100 < ModChocoCraft.featherDropChance)
+				if (d100 < ModChocoCraft.chococraftConfig.config.featherDropChance)
 				{
 					this.dropFeather();
 				}
-				this.timeUntilNextFeather = this.rand.nextInt(ModChocoCraft.featherDelayRandom) + ModChocoCraft.featherDelayStatic;
+				this.timeUntilNextFeather = this.rand.nextInt(ModChocoCraft.chococraftConfig.config.featherDelayRandom) + ModChocoCraft.chococraftConfig.config.featherDelayStatic;
 			}
 		}
 	}
@@ -301,9 +301,9 @@ public abstract class EntityChocobo extends EntityChocoboRideable
 	@Override
 	protected String getLivingSound()
 	{
-		if (ModChocoCraft.livingSoundProb != 0 
+		if (ModChocoCraft.chococraftConfig.config.livingSoundProbability != 0
 				&& rand.nextInt(4) == 0 
-				&& rand.nextInt(100) < ModChocoCraft.livingSoundProb)
+				&& rand.nextInt(100) < ModChocoCraft.chococraftConfig.config.livingSoundProbability)
 		{
 			return "chococraft:choco_kweh";
 		}
