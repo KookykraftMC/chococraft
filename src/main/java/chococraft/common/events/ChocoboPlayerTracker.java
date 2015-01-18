@@ -38,7 +38,8 @@ public class ChocoboPlayerTracker
 
 		try {
 			UpdateChecker.VersionInfo latestVersionInfo = UpdateChecker.getResponse().versions.get(0);
-			if(latestVersionInfo.modversion.equals(Constants.TCC_VERSION))
+
+			if(!UpdateChecker.isVersionHigher(latestVersionInfo.modversion, Constants.TCC_VERSION))
 				return;
 
 			ChatStyle styleUnderlined = new ChatStyle().setUnderlined(true).setColor(EnumChatFormatting.GOLD);
