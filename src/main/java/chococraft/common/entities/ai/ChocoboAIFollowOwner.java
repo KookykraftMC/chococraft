@@ -95,6 +95,9 @@ public class ChocoboAIFollowOwner extends EntityAIBase
 	@Override
 	public void updateTask()
 	{
+		if(this.chocobo.getLeashed())
+			return;
+		
 		if(--this.followDelay <= 0)
 		{
 			this.followDelay = 10;
