@@ -71,6 +71,7 @@ public class ChocoboPlayerTracker
 	@SubscribeEvent
 	public void onPlayerLogout(PlayerEvent.PlayerLoggedOutEvent event)
 	{
+		if (event.player == null) return;
 		this.sendLocalSetupUpdate((EntityPlayerMP)event.player);
 	}
 
