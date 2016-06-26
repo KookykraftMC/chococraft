@@ -16,6 +16,7 @@ package chococraft.common;
 
 import chococraft.common.config.*;
 import chococraft.common.config.gson.ConfigGson;
+import chococraft.common.entities.spawner.ChocoboSpawner;
 import chococraft.common.events.ChocoboPlayerTracker;
 import chococraft.common.gui.ChocoboGuiHandler;
 import chococraft.common.network.PacketRegistry;
@@ -240,6 +241,8 @@ public class ModChocoCraft
 
 		ChocoCraftModIntegration.integrateMods();
 
+		ChocoboSpawner.registerChocoboSpawns();
+
 		chococraftConfig = new ConfigGson();
 	}
 	
@@ -264,7 +267,7 @@ public class ModChocoCraft
 
 		NetworkRegistry.INSTANCE.registerGuiHandler(this, new ChocoboGuiHandler());
 
-		FMLCommonHandler.instance().bus().register(new ServerSpawnTickHandler());
+		//FMLCommonHandler.instance().bus().register(new ServerSpawnTickHandler());
 
 		new Thread(new UpdateChecker()).start();
 	}

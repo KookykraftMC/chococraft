@@ -16,7 +16,11 @@ package chococraft.common.entities.spawner;
 
 import java.util.ArrayList;
 
+import com.google.common.base.Predicates;
+import com.google.common.collect.Iterators;
+import cpw.mods.fml.common.registry.EntityRegistry;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
@@ -30,6 +34,11 @@ import chococraft.common.helper.ChocoboBiomeHelper;
 
 public final class ChocoboSpawner
 {
+	public static void registerChocoboSpawns() {
+		BiomeGenBase[] allBiomes = Iterators.toArray(Iterators.filter(Iterators.forArray(BiomeGenBase.getBiomeGenArray()), Predicates.notNull()), BiomeGenBase.class);
+		EntityRegistry.addSpawn(EntityChocobo.class, 4, 2, 4, EnumCreatureType.creature, allBiomes);
+	}
+	/*
 	public static void doChocoboSpawning(World world, double posX, double posY, double posZ)
 	{
 		if(!world.isRemote)
@@ -324,5 +333,5 @@ public final class ChocoboSpawner
 			}
 		}
 		return MathHelper.floor_double(distance);
-	}
+	}*/
 }

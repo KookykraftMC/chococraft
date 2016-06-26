@@ -11,6 +11,7 @@ import java.util.List;
 
 public class ServerSpawnTickHandler
 {
+	/*
 	public static int spawnTimer = 0;
 	@SubscribeEvent
 	public void worldTick(TickEvent.WorldTickEvent event)
@@ -24,6 +25,6 @@ public class ServerSpawnTickHandler
 			ChocoboSpawner.doChocoboSpawning(player.worldObj, player.posX, player.posY, player.posZ);
 			ModChocoCraft.spawnDbTimeDelay = player.worldObj.getTotalWorldTime();
 		}
-	}
+	}*/
 
 }
