@@ -26,6 +26,7 @@ import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ChatStyle;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IChatComponent;
+import org.apache.commons.lang3.Validate;
 
 
 public class ChocoboPlayerTracker
@@ -71,7 +72,8 @@ public class ChocoboPlayerTracker
 	@SubscribeEvent
 	public void onPlayerLogout(PlayerEvent.PlayerLoggedOutEvent event)
 	{
-		if (event.player == null) return;
+		if (event.player == null || ((EntityPlayerMP)event.player).playerNetServerHandler == null) return;
+		//Validate.notNull(event.player, "Player is null"); maybe later?
 		this.sendLocalSetupUpdate((EntityPlayerMP)event.player);
 	}
 

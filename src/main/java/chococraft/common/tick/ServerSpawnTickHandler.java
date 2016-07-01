@@ -4,8 +4,10 @@ import chococraft.common.ModChocoCraft;
 import chococraft.common.entities.spawner.ChocoboSpawner;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
+import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.server.MinecraftServer;
+import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 
 import java.util.List;
 
